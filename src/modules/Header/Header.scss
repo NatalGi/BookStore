@@ -1,0 +1,36 @@
+@import '../../variables';
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .Brand {
+    font-size: 1.6em;
+    text-transform: uppercase;
+    letter-spacing: .4em;
+  }
+
+  .Nav {
+    font-size: .9em;
+    text-transform: uppercase;
+    letter-spacing: .4em;
+
+    .Link {
+      margin-left: 40px;
+      color: $gray;
+
+      &.icon {
+        font-size: 1.5em;
+      }
+
+      &.active {
+        color: $gray-darkest;
+      }
+
+      &:hover:not(.active) {
+        color: $sea;
+      }
+    }
+  }
+}
