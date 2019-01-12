@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+
 import { Header } from '../Header/Header';
+import { Footer } from '../Footer/Footer';
+
 import styles from './MainLayout.scss';
 
 export class MainLayout extends Component {
@@ -8,6 +11,7 @@ export class MainLayout extends Component {
       <div className="MainContainer">
         <Header />
         {this.props.children}
+        <Footer />
       </div>
     );
   }

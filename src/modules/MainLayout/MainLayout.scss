@@ -1,4 +1,9 @@
 .MainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+
   max-width: 1250px;
   min-height: 100vh;
   margin: 0 auto;

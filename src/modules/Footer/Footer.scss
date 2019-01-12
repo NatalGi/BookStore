@@ -1,0 +1,32 @@
+@import '../../variables';
+
+.Footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .Rights {
+    font-size: .9em;
+    letter-spacing: .1em;
+    color: $gray;
+  }
+
+  .Nav {
+    font-size: .9em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+
+    .Link {
+      margin-left: 25px;
+      color: $gray;
+
+      &.active {
+        color: $gray-darkest;
+      }
+
+      &:hover:not(.active) {
+        color: $sea;
+      }
+    }
+  }
+}
