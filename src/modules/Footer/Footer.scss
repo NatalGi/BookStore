@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 80px;
 
   .Rights {
     font-size: .9em;
@@ -25,6 +26,7 @@
       }
 
       &:hover:not(.active) {
+        font-weight: 500;
         color: $sea;
       }
     }

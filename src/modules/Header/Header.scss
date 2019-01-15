@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 100px;
 
   .Brand {
     font-size: 1.6em;
@@ -29,6 +30,7 @@
       }
 
       &:hover:not(.active) {
+        font-weight: 500;
         color: $sea;
       }
     }

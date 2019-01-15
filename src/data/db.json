@@ -1,0 +1,195 @@
+{
+  "books": [
+    {
+      "id": "01",
+      "author": "Makowska Anna",
+      "title": "Smart shopping. Kupuj świadomie! Żyj zdrowiej!",
+      "publisher": "Burda Książki",
+      "price": "25,50",
+      "ean": "9788380534575",
+      "year": "2018",
+      "pages": "240",
+      "cover": "zintegrowana",
+      "desc": "Jedzenie to przyjemność, ale jak odnaleźć w gąszczu sklepowych półek wśród tysięcy kolorowych produktów te naprawdę wartościowe? Autorka, farmaceutka z wykształcenia, pokazuje, że robienie zakupów spożywczych nie musi być źródłem stresu, a kluczem do oceny jest skład produktu.\n\"Nasz świat to jedna wielka scena dla wielu aktorów - związków chemicznych. Jedne są lepsze, fajniejsze, a inne mniej korzystne dla naszego zdrowia. To czarne charaktery. Niektórych nie da się uniknąć, ale warto wyeliminować te, które jesteś w stanie odstawić od ręki... Wystarczy wziąć z półki w sklepie opakowanie leżące obok\".",
+      "pic": "/pics/01.jpg",
+      "categories": [
+        { "01": "06" },
+        { "02": "07" }
+      ]
+    },
+    {
+      "id": "02",
+      "author": "Dymek Marta",
+      "title": "Nowa Jadłonomia. Roślinne przepisy z całego świata",
+      "publisher": "Marginesy",
+      "price": "29,99",
+      "ean": "9788365973863",
+      "year": "2018",
+      "pages": "288",
+      "cover": "twarda",
+      "desc": "Nowe, poręczne wydanie superbestsellera! Zjeździła Wietnam i Tajlandię, zmarzła w Korei, pojechała ucierać pasty curry do Indii, przejechała całe Bałkany, zgrzała się na targowiskach w Maroko i rozpływała się nad świeżym awokado w Kalifornii. Odwiedziła ponad pięćdziesiąt krajów, a kulturę każdego z nich poznawała od kuchni. Dla Marty Dymek najważniejsze były regionalne przyprawy, tradycyjne śniadania, rytualne obiady, narodowe dania, ulubione słodkości oraz to, jak wyglądają stragany i targowiska. W każdej podróży spisywała przepisy, notowała najciekawsze połączenia oraz spotykała się z tamtejszymi kucharzami, kucharkami i domowymi gospodyniami. Kuchnia roślinna nie pochodzi z konkretnego kraju ani kontynentu. Od wieków roślinne potrawy można spotkać na każdej szerokości geograficznej, bez względu na temperaturę, klimat i wysokość nad poziomem morza. Wegańskie jest zarówno meksykańskie guacamole, swojski barszcz z uszkami, afrykański gulasz z jarmużu, jak i buraczane curry z cynamonem. Jeśli tylko wie się, gdzie patrzeć, w każdym kraju z łatwością można spotkać mnóstwo roślinnych przepisów, które otwierają oczy na niespotykane dotąd połączenia i pozwalają na nowo odkryć dobrze znane warzywa. Uwierzcie, że zjedzenie bulwy selera po chińsku zmienia kulinarną wyobraźnię raz na zawsze. Marta Dymek to blogerka, autorka kulinarnego bloga Jadłonomia (Kulinarny Blog Roku 2013) i książki pod tym samym tytułem, która doczekała się kilku dodruków. Od sześciu lat prowadzi swoją stronę, na której dzieli się wegańskimi przepisami oraz wskazówkami na temat roślinnego gotowania. Współpracowała z nowojorskim kwartalnikiem kulinarnym \"Chickpea Magazine\". Jej teksty publikowano też w \"Magazynie Smak\", \"Kukbuku\" i \"Gazecie Wyborczej\", a także w jej autorskiej rubryce w \"Kuchnia. Magazyn dla Smakoszy\". Na kanale Kuchnia+ prowadzi swój autorski program Zielona rewolucja Marty Dymek.",
+      "pic": "/pics/02.jpg",
+      "categories": [
+        { "01": "07" }
+      ]
+    },
+    {
+      "id": "03",
+      "author": "Szaciłło Karolina, Szaciłło Maciej",
+      "title": "Przyprawy które leczą",
+      "publisher": "Zwierciadło",
+      "price": "28,00",
+      "ean": "9788381320467",
+      "year": "2018",
+      "pages": "272",
+      "cover": "twarda",
+      "desc": "Czy wiesz jak wielka siła tkwi w przyprawach i ziołach? Przeczytaj Przyprawy, które leczą i skorzystaj z leczniczej mocy natury! \nIlość przypraw, ziół i korzennych mieszanek na sklepowych półkach rośnie z roku na rok, jednak wiedza na ich temat jest wciąż niewielka. Dowiedz się jak nawet najmniejsza ilość kminu rzymskiego, cynamonu cejlońskiego lub mniej znanej asafetydy może zmienić smak i właściwości zdrowotne jedzenia. Wypróbuj proste przepisy na pyszne dania i naturalne lekarstwa. Odkryj również, które zioła i przyprawy wychładzają, a które rozgrzewają, a także w jaki sposób oddziałują one na emocje. Równowaga między smakami, którą kryją w sobie przyprawy, pomaga w osiągnięciu harmonii, spokoju i… szczęścia. \nW książce Przyprawy, które leczą znajdziesz, m.in.: \nszczegółową wiedzę na temat ziół i przypraw, w tym zawartych w nich substancji czynnych, smaku i właściwości zdrowotnych, proste i zaskakujące przepisy na pyszne dania i naturalne metody leczenia, np. naturalny lek na przeziębienie z mielonej czarnuszki i miodu lub shot z imbiru cytryny i miodu, czyli domowy sposób na niestrawność, sposoby na wydobycie smaku i aromatu z przypraw. Książka Przyprawy, które leczą to kolejna część bestsellerowej serii, w której dotychczas ukazały się, m.in. Jedzenie, które leczy, Zdrowa tarczyca (Wydawnictwo Zwierciadło). \nKarolina i Maciej Szaciłło - eksperci od zdrowego żywienia oraz ekologicznego trybu życia. Wspólnie prowadzą kursy, szkolenia oraz warsztaty zdrowego gotowania i medytacji. Maciej od lat gotuje w lubianych programach telewizyjnych. Autorzy popularnych poradników dietetycznych, m.in. Jedz i pracuj nad własnym zdrowiem, Jedzenie, które leczy, Jem (to co) kocham i chudnę, Zdrowa tarczyca, Dieta Raw Food, Depresja. Jedzenie, które leczy (Wydawnictwo Zwierciadło",
+      "pic": "/pics/03.jpg",
+      "categories": [
+        { "01": "06" },
+        { "02": "07" }
+      ]
+    },
+    {
+      "id": "04",
+      "author": "Bałuk Kamil, Krupiński Wacław",
+      "title": "Wodecki. Tak mi wyszło",
+      "publisher": "AGORA",
+      "price": "26,99",
+      "ean": "9788326827051",
+      "year": "2018",
+      "pages": "352",
+      "cover": "miękka",
+      "desc": "Zbigniew czy Zbyszek? Skrzypek klasyczny czy trębacz rozrywkowy? Artysta estradowy czy muzyk awangardowy? Zbigniew Wodecki miał dwa życiorysy. W pierwszym występował w filharmoniach jako skrzypcowy solista, podbijał Europę u boku Ewy Demarczyk, szalał w jazzowych improwizacjach i nagrywał piosenki, które wyprzedzały resztę polskiego popu przynajmniej o długość plerezy. W drugim uchodził za eleganckiego pana z telewizji, showmana w popularnych programach, muzyczną instytucję. Tyle że o tym pierwszym wszyscy na lata zapomnieli. Nawet on sam. Wodecki. Tak mi wyszło to książka na dwa głosy: reporterska opowieść Kamila Bałuka o Zbigu i jego przebojowym „powrocie” na scenę w 40 lat od debiutu; oraz historia Zbigniewa, którą Wodecki snuje w autobiograficznej rozmowie z Wacławem Krupińskim dosłownie na chwilę przed wybuchem Zbigomanii. Czy Zbigniew mógł przypuszczać, że powróci jako Zbig? Czy Zbig w młodości planował zostać Zbigniewem? A może po prostu tak mu wyszło?",
+      "pic": "/pics/04.jpg",
+      "categories": [
+        { "01": "01" },
+        { "02": "12" }
+      ]
+    },
+    {
+      "id": "05",
+      "author": "Blake Mark",
+      "title": "Queen. Królewska historia",
+      "publisher": "SQN",
+      "price": "28,00",
+      "ean": "9788381293112",
+      "year": "2018",
+      "pages": "496",
+      "cover": "miękka",
+      "desc": "Biblia fanów Queen, manifest pokolenia, portret fenomenu Niepublikowane wcześniej wspomnienia, zaskakujące anegdoty, intrygujące fakty. Zagrożone losy zespołu, kiedy muzycy Genesis próbowali pozyskać do swojego składu Rogera Taylora. Śmierć Mercury’ego niedaleko miejsca, gdzie 21 lat wcześniej znaleziono ciało jego idola, Jimiego Hendrixa. Głęboka depresja Johna Deacona po stracie przyjaciela. Legendarna gitara Briana zbudowana domowym sposobem. Fascynacja zespołu scrabble’ami. Gdy Elton John usłyszał Bohemian Rhapsody, zapytał: „Czy wyście, k…a, oszaleli?”. Mark Blake przez lata rozmawiał z trzema żyjącymi muzykami grupy, dotarł także do dziesiątków innych osób – zapomnianych basistów Queen czy szkolnych kolegów Freddiego. Po raz pierwszy możemy tak szczegółowo prześledzić bogatą karierę zespołu uwielbianego przez Michaela Jacksona i wiele innych gwiazd, przemianę nieśmiałego chłopca z Zanzibaru w najbardziej charyzmatyczną postać w historii rocka, a także późniejsze kariery pozostałych członków grupy. Z wielką dumą prezentujemy polskim czytelnikom prawdziwą perłę na rynku biografii muzycznych – najlepszą historię Queen, jaka kiedykolwiek została napisana.",
+      "pic": "/pics/05.jpg",
+      "categories": [
+        { "01": "01" },
+        { "02": "12" }
+      ]
+    },
+    {
+      "id": "06",
+      "author": "Sajer Guy",
+      "title": "Zapomniany żołnierz",
+      "publisher": "Rebis - Dom Wydawniczy",
+      "price": "32,00",
+      "ean": "9788380624191",
+      "year": "2018",
+      "pages": "656",
+      "cover": "miękka  ze skrzydełkami",
+      "desc": "Najbardziej wstrząsająca i brutalna książka o II wojnie światowej. Prawdziwa aż do bólu!\n Guy Sajer jako kilkunastolatek wyruszył w 1942 roku w szeregach Wehrmachtu na front wschodni. Początkowo służył w jednostce transportowej, a latem 1943 roku zgłosił się na ochotnika do Dywizji \"Gross Deutschland\". Marzył o przygodzie, lecz musiał desperacko walczyć o przetrwanie. Jego wspomnienia są wyjątkowe, to zapis wydarzeń \"oglądanych oczyma siedemnastoletniego młodzieńca, który przeżywać musi to, co wielu dojrzałym mężczyznom niełatwo byłoby znieść\". Ta jedyna w swoim rodzaju opowieść o wojnie nawet dzisiaj poraża ładunkiem grozy i naturalizmu.",
+      "pic": "/pics/06.jpg",
+      "categories": [
+        { "01": "01" },
+        { "02": "12" }
+      ]
+    },
+    {
+      "id": "07",
+      "author": "Blanch Teresa, Gasol Anna",
+      "title": "Wielka księga wartości",
+      "publisher": "NASZA KSIĘGARNIA",
+      "price": "26,00",
+      "ean": "9788310133434",
+      "year": "2018",
+      "pages": "144",
+      "cover": "twarda",
+      "desc": "\"Wielka księga wartości\" to szesnaście niezwykłych opowieści, dzięki którym nauczymy się stawiać czoła trudnym sytuacjom i szukać ich rozwiązania. Dowiemy się, na czym polegają tolerancja, uprzejmość, solidarność, szczerość oraz empatia i jakie mają znaczenie w życiu każdego człowieka. Odkryjemy też, jak ważne jest akceptowanie siebie.\n To książka, którą można czytać bez końca. To książka, która uczy nas zrozumienia i empatii. To książka, która pokazuje, jak żyć.\n Przepięknie zilustrowana \"Wielka księga wartości\" pomoże również dorosłym, którzy chcieliby w przystępny sposób opowiedzieć dzieciom, czym kierować się w życiu.",
+      "pic": "/pics/07.jpg",
+      "categories": [
+        { "01": "01" },
+        { "02": "03" },
+        { "03": "04" }
+      ]
+    },
+    {
+      "id": "08",
+      "author": "Wierzbicki Łukasz",
+      "title": "Afryka Kazika",
+      "publisher": "BIS",
+      "price": "22,00",
+      "ean": "9788375515329",
+      "year": "2017",
+      "pages": "168",
+      "cover": "twarda",
+      "desc": "Trzecie wydanie niezwykle popularnej książki dla dzieci \"Afryka Kazika\". Opowiadania zostały napisane na podstawie reportaży Kazimierza Nowaka, który w latach trzydziestych XX wieku przemierzył Afrykę na rowerze. Barwne spotkania z mieszkańcami Afryki, mrożące krew w żyłach, a niekiedy zabawne przygody, które zdarzyły się naprawdę, pozwolą poznać młodemu czytelnikowi tego niezwykłego podróżnika. Nowe poprawione wydanie zostało uzupełnione o dwa dodatkowe opowiadania i kilka nowych ilustracji. Do książki dołączona jest mapa Afryki z zaznaczoną trasą podróży Nowaka.",
+      "pic": "/pics/08.jpg",
+      "categories": [
+        { "01": "01" },
+        { "02": "03" },
+        { "03": "04" }
+      ]
+    }
+  ],
+  "categories": {
+    "01": {
+      "id": "01",
+      "name": "Literatura i beletrystyka"
+    },
+    "02": {
+      "id": "02",
+      "name": "Sensacja, thriller, kryminał"
+    },
+    "03": {
+      "id": "03",
+      "name": "Książki dla dzieci"
+    },
+    "04": {
+      "id": "04",
+      "name": "Książki dla młodzieży"
+    },
+    "05": {
+      "id": "05",
+      "name": "Komiksy"
+    },
+    "06": {
+      "id": "06",
+      "name": "Poradniki"
+    },
+    "07": {
+      "id": "07",
+      "name": "Kuchnia, diety, gotowanie"
+    },
+    "08": {
+      "id": "08",
+      "name": "Książki popularnonaukowe"
+    },
+    "09": {
+      "id": "09",
+      "name": "Nauka, biznes"
+    },
+    "10": {
+      "id": "10",
+      "name": "Nauka języków"
+    },
+    "11": {
+      "id": "11",
+      "name": "Podręczniki, ćwiczenia i zadania"
+    },
+    "12": {
+      "id": "12",
+      "name": "Biografia i literatura faktu"
+    },
+    "13": {
+      "id": "13",
+      "name": "Pozostałe"
+    }
+  }
+}

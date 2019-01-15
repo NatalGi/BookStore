@@ -8,7 +8,13 @@ import { Statute } from '../Statute/Statute';
 import { Contact } from '../Contact/Contact';
 import { Cart } from '../Cart/Cart';
 
+import { fetchProducts } from '../Product/ProductActions';
+
 class App extends Component {
+  componentDidMount() {
+    fetchProducts()(this.props.store.dispatch);
+  }
+
   render() {
     return (
       <BrowserRouter>
