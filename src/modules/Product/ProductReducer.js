@@ -8,16 +8,18 @@ function compareValues(key, order="asc") {
       return 0;
     }
 
-    const varA = (typeof a[key] === 'string') ?
-      a[key].toUpperCase() : a[key];
-    const varB = (typeof b[key] === 'string') ?
-      b[key].toUpperCase() : b[key];
-
+    const varA = a[key];
+    const varB = b[key];
     let comparison = 0;
-    if(varA > varB) {
-      comparison = 1;
-    } else if(varA < varB) {
-      comparison = -1;
+
+    if(typeof varA === 'string' || typeof varB === 'string') { // strings
+      comparison = varA.localeCompare(varB);
+    } else { // numbers
+      if(varA > varB) {
+        comparison = 1;
+      } else if(varA < varB) {
+        comparison = -1;
+      }
     }
 
     return (
