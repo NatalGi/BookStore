@@ -1,16 +1,18 @@
 import { FETCH_PRODUCTS, SORT_ASC, SORT_DESC } from './ProductActions';
-import compareObjects from '../../util/compareObjects';
 
-const initialState = {};
+const initialState = {
+  productList: {},
+  order: {},
+};
 
 const ProductReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_PRODUCTS:
-      return { ...action.products };
+      return Object.assign({}, state, {productList: { ...action.products }});
     case SORT_ASC:
-      return Object.values(state).sort(compareObjects(action.field));
+      return Object.assign({}, state, {order: {field: action.field, direction: 'asc'}});
     case SORT_DESC:
-      return Object.values(state).sort(compareObjects(action.field, "desc"));
+      return Object.assign({}, state, {order: {field: action.field, direction: 'desc'}});
     default:
       return state;
   }

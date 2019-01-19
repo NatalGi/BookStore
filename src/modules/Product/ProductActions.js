@@ -1,6 +1,6 @@
 import fetchFromFile from '../../util/fetchData';
 
-export const FETCH_PRODUCTS = 'CREATE_PODUCTS';
+export const FETCH_PRODUCTS = 'FETCH_PRODUCTS';
 export const SORT_ASC = 'SORT_ASC';
 export const SORT_DESC = 'SORT_DESC';
 

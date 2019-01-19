@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ProductListItem from './ProductListItem';
 import Pagination from '../Pagination/Pagination';
+import compareObjects from '../../util/compareObjects';
 
 import './ProductList.scss';
 
@@ -25,7 +26,7 @@ const ProductList = ({ products, page }) => {
 
 const mapStateToProps = (state) => {
   return {
-    products: Object.values(state.products),
+    products: Object.values(state.products.productList).sort(compareObjects(state.products.order.field, state.products.order.direction)),
   }
 }
 

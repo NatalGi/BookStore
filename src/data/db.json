@@ -1,6 +1,6 @@
 {
-  "books": [
-    {
+  "books": {
+    "01": {
       "id": "01",
       "author": "Makowska Anna",
       "title": "Smart shopping. Kupuj świadomie! Żyj zdrowiej!",
@@ -17,7 +17,7 @@
         { "02": "07" }
       ]
     },
-    {
+    "02": {
       "id": "02",
       "author": "Dymek Marta",
       "title": "Nowa Jadłonomia. Roślinne przepisy z całego świata",
@@ -33,7 +33,7 @@
         { "01": "07" }
       ]
     },
-    {
+    "03": {
       "id": "03",
       "author": "Szaciłło Karolina, Szaciłło Maciej",
       "title": "Przyprawy które leczą",
@@ -50,7 +50,7 @@
         { "02": "07" }
       ]
     },
-    {
+    "04": {
       "id": "04",
       "author": "Bałuk Kamil, Krupiński Wacław",
       "title": "Wodecki. Tak mi wyszło",
@@ -67,7 +67,7 @@
         { "02": "12" }
       ]
     },
-    {
+    "05": {
       "id": "05",
       "author": "Blake Mark",
       "title": "Queen. Królewska historia",
@@ -84,7 +84,7 @@
         { "02": "12" }
       ]
     },
-    {
+    "06": {
       "id": "06",
       "author": "Sajer Guy",
       "title": "Zapomniany żołnierz",
@@ -101,7 +101,7 @@
         { "02": "12" }
       ]
     },
-    {
+    "07": {
       "id": "07",
       "author": "Blanch Teresa, Gasol Anna",
       "title": "Wielka księga wartości",
@@ -119,7 +119,7 @@
         { "03": "04" }
       ]
     },
-    {
+    "08": {
       "id": "08",
       "author": "Wierzbicki Łukasz",
       "title": "Afryka Kazika",
@@ -137,7 +137,7 @@
         { "03": "04" }
       ]
     }
-  ],
+  },
   "categories": {
     "01": {
       "id": "01",
