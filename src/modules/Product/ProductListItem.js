@@ -12,7 +12,8 @@ const ProductListItem = ({ product }) => {
       <div className="image-container">
         <img className="image" src={require(`../../data${product.pic}`)} alt={product.pic} />
       </div>
-      <h3 className="title">{product.title}</h3>
+      <h3 className="title">{product.title.length > 26 ? product.title.substring(0, 26) + "..." : product.title}</h3>
+      <h4 className="subtitle">{product.subtitle ? (product.subtitle.length > 40 ? product.subtitle.substring(0, 40) + "..." : product.subtitle) : ""}</h4>
       <h4 className="price">{product.price} zł</h4>
     </div>
   );

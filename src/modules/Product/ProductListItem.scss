@@ -21,8 +21,14 @@
 
   .title {
     margin: 5px 0;
-    font-size: 1em;
+    font-size: 1.3em;
     font-weight: 500;
+  }
+
+  .subtitle {
+    margin-top: 0;
+    height: 15px;
+    color: $gray-dark;
   }
 
   .author {
