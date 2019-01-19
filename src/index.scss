@@ -23,3 +23,18 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+*[class*="-btn"] {
+  display: block;
+  margin: 20px 0;
+  padding: 8px 20px;
+  background-color: $sea-darkest;
+  border: 1px solid $sea-darkest;
+  border-radius: 2px;
+  color: white;
+
+  &:hover {
+    background-color: inherit;
+    color: $sea-darkest;
+  }
+}

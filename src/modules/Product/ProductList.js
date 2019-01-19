@@ -26,7 +26,7 @@ const ProductList = ({ products, page }) => {
 
 const mapStateToProps = (state) => {
   return {
-    products: Object.values(state.products.productList).sort(compareObjects(state.products.order.field, state.products.order.direction)),
+    products: Object.values(state.products.productList).sort(compareObjects(state.products.displayOrder.field, state.products.displayOrder.direction)),
   }
 }
 

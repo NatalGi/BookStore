@@ -1,0 +1,44 @@
+@import '../../variables';
+
+.ProductDetails {
+  display: flex;
+  justify-content: space-between;
+
+  .pic-section {
+    flex: 0 1 30%;
+
+    .image {
+      width: 100%;
+    }
+  }
+
+  .data-section {
+    flex: 0 1 67%;
+
+    .author {
+      font-weight: 400;
+      text-transform: uppercase;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .subtitle {
+      margin-top: 0;
+    }
+
+    .desc {
+      font-size: .95em;
+      line-height: 1.5em;
+      color: $gray-darkest;
+    }
+
+    .info, .divider {
+      display: inline;
+    }
+  }
+}
