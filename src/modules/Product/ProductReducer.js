@@ -1,41 +1,16 @@
-import { CREATE_PRODUCTS, SORT_ASC, SORT_DESC } from './ProductActions';
+import { FETCH_PRODUCTS, SORT_ASC, SORT_DESC } from './ProductActions';
+import compareObjects from '../../util/compareObjects';
 
 const initialState = {};
 
-function compareValues(key, order="asc") {
-  return function(a, b) {
-    if(!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) {
-      return 0;
-    }
-
-    const varA = a[key];
-    const varB = b[key];
-    let comparison = 0;
-
-    if(typeof varA === 'string' || typeof varB === 'string') { // strings
-      comparison = varA.localeCompare(varB);
-    } else { // numbers
-      if(varA > varB) {
-        comparison = 1;
-      } else if(varA < varB) {
-        comparison = -1;
-      }
-    }
-
-    return (
-      (order == 'desc') ? (comparison * -1) : comparison
-    )
-  }
-}
-
 const ProductReducer = (state = initialState, action) => {
   switch (action.type) {
-    case CREATE_PRODUCTS:
-      return { ...action.books };
+    case FETCH_PRODUCTS:
+      return { ...action.products };
     case SORT_ASC:
-      return Object.values(state).sort(compareValues(action.field));
+      return Object.values(state).sort(compareObjects(action.field));
     case SORT_DESC:
-      return Object.values(state).sort(compareValues(action.field, "desc"));
+      return Object.values(state).sort(compareObjects(action.field, "desc"));
     default:
       return state;
   }

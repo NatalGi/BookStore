@@ -5,15 +5,15 @@ import { bindActionCreators } from 'redux';
 
 import './ProductListItem.scss';
 
-const ProductListItem = ({ book }) => {
+const ProductListItem = ({ product }) => {
   return (
     <div className="ProductListItem">
-      <h4 className="author">{book.author}</h4>
+      <h4 className="author">{product.author}</h4>
       <div className="image-container">
-        <img className="image" src={require(`../../data${book.pic}`)} alt={book.pic} />
+        <img className="image" src={require(`../../data${product.pic}`)} alt={product.pic} />
       </div>
-      <h3 className="title">{book.title}</h3>
-      <h4 className="price">{book.price} zł</h4>
+      <h3 className="title">{product.title}</h3>
+      <h4 className="price">{product.price} zł</h4>
     </div>
   );
 }

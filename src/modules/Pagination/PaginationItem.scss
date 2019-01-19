@@ -1,0 +1,13 @@
+.PaginationItem {
+  border: 1px solid black;
+  padding: 0 8px;
+  height: 30px;
+  margin: 0 5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  &.active {
+    border: 0;
+  }
+}

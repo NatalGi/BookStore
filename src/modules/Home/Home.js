@@ -4,9 +4,13 @@ import ProductList from '../Product/ProductList';
 
 import './Home.scss';
 
-export const Home = () => (
-  <div className="Home">
-    <Sort />
-    <ProductList />
-  </div>
-);
+export const Home = ({ match }) => {
+  const pageNumber = match.params.page ? match.params.page : 1;
+
+  return (
+    <div className="Home">
+      <Sort />
+      <ProductList page={pageNumber}/>
+    </div>
+  );
+};

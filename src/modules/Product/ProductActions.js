@@ -1,23 +1,22 @@
 import fetchFromFile from '../../util/fetchData';
 
-export const CREATE_PRODUCTS = 'CREATE_PODUCTS';
+export const FETCH_PRODUCTS = 'CREATE_PODUCTS';
 export const SORT_ASC = 'SORT_ASC';
 export const SORT_DESC = 'SORT_DESC';
 
-export function fetchProducts() {
+export function successFetchProducts() {
   return (dispatch) => {
-    const res = fetchFromFile()
+    fetchFromFile()
       .then(res => {
-        dispatch(createProducts(res.books));
+        dispatch(fetchProducts(res.books));
       });
-    return;
   }
 }
 
-export function createProducts(books) {
+export function fetchProducts(products) {
   return {
-    type: CREATE_PRODUCTS,
-    books,
+    type: FETCH_PRODUCTS,
+    products,
   }
 }
 

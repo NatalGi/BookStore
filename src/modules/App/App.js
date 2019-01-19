@@ -8,11 +8,11 @@ import { Statute } from '../Statute/Statute';
 import { Contact } from '../Contact/Contact';
 import { Cart } from '../Cart/Cart';
 
-import { fetchProducts } from '../Product/ProductActions';
+import { successFetchProducts } from '../Product/ProductActions';
 
 class App extends Component {
-  componentDidMount() {
-    fetchProducts()(this.props.store.dispatch);
+  componentWillMount() {
+    successFetchProducts()(this.props.store.dispatch);
   }
 
   render() {
@@ -21,6 +21,7 @@ class App extends Component {
         <MainLayout>
           <Switch>
             <Route exact path={'/'} component={Home} />
+            <Route exact path={'/page/:page'} component={Home} />
             <Route exact path={'/faq'} component={Faq} />
             <Route exact path={'/statue'} component={Statute} />
             <Route exact path={'/contact'} component={Contact} />
