@@ -1,0 +1,84 @@
+@import '../../variables';
+
+.CartListItem {
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid $gray-light;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+
+  .pic-section {
+    flex: 0 1 10%;
+    display: flex;
+    align-items: center;
+
+    .pic {
+      width: 100%;
+    }
+  }
+
+  .data-section {
+    flex: 0 1 50%;
+
+    .author {
+      font-weight: 400;
+      text-transform: uppercase;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
+    .title {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 1.3em;
+    }
+
+    .subtitle {
+      margin-top: 0;
+      font-size: .9em;
+    }
+  }
+
+  .price-section {
+    flex: 0 1 10%;
+    text-align: center;
+  }
+
+  .amount-section {
+    flex: 0 1 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .small-btn {
+      display: inline;
+      padding: 3px 8px;
+      background-color: inherit;
+      border: 0;
+      color: $gray-darkest;
+
+      &:hover:not(.disabled) {
+        background-color: $gray-darkest;
+        color: white;
+      }
+
+      &.disabled {
+        color: $gray;
+        cursor: not-allowed;
+      }
+    }
+
+    .margin {
+      margin: 0 10px;
+    }
+
+    .icon {
+      display: inline-flex;
+      margin-left: 10px;
+      padding: 5px;
+    }
+  }
+}

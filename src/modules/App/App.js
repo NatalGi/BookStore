@@ -6,7 +6,7 @@ import { Home } from '../Home/Home';
 import { Faq } from '../Faq/Faq';
 import { Statute } from '../Statute/Statute';
 import { Contact } from '../Contact/Contact';
-import { Cart } from '../Cart/Cart';
+import Cart from '../Cart/Cart';
 import ProductDetails from '../ProductDetails/ProductDetails';
 
 import { successFetchProducts } from '../Product/ProductActions';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
+import parseCurrency from '../../util/parseCurrency';
 //import PropTypes from 'prop-types';
 
 import './ProductListItem.scss';
@@ -17,11 +17,9 @@ const ProductListItem = ({ product }) => {
         {product.title.length > 26 ? product.title.substring(0, 26) + "..." : product.title}
       </Link>
       <h4 className="subtitle">{product.subtitle ? (product.subtitle.length > 40 ? product.subtitle.substring(0, 40) + "..." : product.subtitle) : ""}</h4>
-      <h4 className="price">{product.price} zł</h4>
+      <h4 className="price">{parseCurrency(product.price)} zł</h4>
     </div>
   );
 }
-
-
 
 export default ProductListItem;

@@ -27,11 +27,12 @@ a {
 *[class*="-btn"] {
   display: block;
   margin: 20px 0;
-  padding: 8px 20px;
+  padding: 8px 40px;
   background-color: $sea-darkest;
   border: 1px solid $sea-darkest;
   border-radius: 2px;
   color: white;
+  cursor: pointer;
 
   &:hover {
     background-color: inherit;
