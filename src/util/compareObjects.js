@@ -19,7 +19,7 @@ function compareObjects(key, order="asc") {
     }
 
     return (
-      (order == 'desc') ? (comparison * -1) : comparison
+      (order === 'desc') ? (comparison * -1) : comparison
     )
   }
 }

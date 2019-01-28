@@ -10,10 +10,12 @@ import Cart from '../Cart/Cart';
 import ProductDetails from '../ProductDetails/ProductDetails';
 
 import { successFetchProducts } from '../Product/ProductActions';
+import { successFetchDiscountCodes } from '../DiscountCodes/DiscountCodesActions';
 
 class App extends Component {
   componentWillMount() {
     successFetchProducts()(this.props.store.dispatch);
+    successFetchDiscountCodes()(this.props.store.dispatch);
   }
 
   render() {

@@ -1,6 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { updateCartAmount, deleteFromCart } from '../Product/ProductActions';
 import parseCurrency from '../../util/parseCurrency';
 
 import { FiTrash2 } from 'react-icons/fi';
@@ -32,9 +30,4 @@ const CartListItem = ({ product, amount, updateCartAmount, deleteFromCart }) => 
   );
 }
 
-const mapDispatchToProps = {
-  updateCartAmount,
-  deleteFromCart,
-}
-
-export default connect(null, mapDispatchToProps)(CartListItem);
+export default CartListItem;

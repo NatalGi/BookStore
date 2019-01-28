@@ -6,7 +6,7 @@ import './PaginationItem.scss';
 const PaginationItem = ({ data, activePage, type }) => {
   let linkClass = "PaginationItem";
   let link = data;
-  if(data == activePage) {
+  if(data === activePage) {
     linkClass += " active"
   }
 

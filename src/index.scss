@@ -39,3 +39,25 @@ a {
     color: $sea-darkest;
   }
 }
+
+.small-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  background-color: inherit;
+  border: 0;
+  color: $gray-darkest;
+
+  &:hover:not(.disabled) {
+    background-color: $gray-darkest;
+    color: white;
+  }
+
+  &.disabled {
+    color: $gray;
+    cursor: not-allowed;
+  }
+}

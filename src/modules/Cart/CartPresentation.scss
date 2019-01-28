@@ -1,0 +1,86 @@
+@import '../../variables';
+
+.Cart {
+  .summary {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 30px;
+
+    .cartSum {
+      font-size: 1.4em;
+      font-weight: 700;
+    }
+
+    .accept-code-btn {
+      display: inline;
+      padding: 3px 8px;
+      border-color: $gray-darkest;
+      background-color: inherit;
+      color: $gray-darkest;
+
+      &:hover {
+        background-color: $gray-darkest;
+        color: white;
+      }
+    }
+
+    .discount-section {
+      text-align: right;
+
+      .discount-info {
+        position: relative;
+        display: block;
+        border: 1px solid $sea-darkest;
+        border-radius: 2px;
+        padding: 10px 30px;
+        margin: 12px 0;
+        font-weight: 500;
+        color: $sea-darkest;
+
+        .small-btn {
+          position: absolute;
+          top: -20px;
+          right: 0;
+
+          &.show {
+            display: inline-block;
+          }
+        }
+      }
+
+      .error-info {
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        background-color: $gray-darkest-transparent;
+        padding: 50px;
+
+        &.show {
+          display: block;
+        }
+      }
+
+      .discount-code {
+        display: none;
+
+        .discount-code-input {
+          height: 30px;
+          width: 130px;
+          border: 1px solid $gray-darkest;
+          border-radius: 2px;
+          margin: 0 10px;
+          padding: 5px;
+          text-align: center;
+        }
+
+        &.show {
+          display: block;
+        }
+      }
+    }
+  }
+}

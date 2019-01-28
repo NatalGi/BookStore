@@ -197,5 +197,35 @@
       "id": "13",
       "name": "Pozostałe"
     }
+  },
+  "discountCodes": {
+    "01": {
+      "id": "01",
+      "code": "xy58a4B",
+      "discount": "30",
+      "unit": "%",
+      "limit": false
+    },
+    "02": {
+      "id": "02",
+      "code": "bbvy778a",
+      "discount": "40",
+      "unit": "%",
+      "limit": false
+    },
+    "03": {
+      "id": "03",
+      "code": "uxt469wq",
+      "discount": "20",
+      "unit": "%",
+      "limit": false
+    },
+    "04": {
+      "id": "04",
+      "code": "sw98r17b",
+      "discount": "10",
+      "unit": "PLN",
+      "limit": "20"
+    }
   }
 }

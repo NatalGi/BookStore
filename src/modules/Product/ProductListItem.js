@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import parseCurrency from '../../util/parseCurrency';
 //import PropTypes from 'prop-types';

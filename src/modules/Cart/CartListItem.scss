@@ -53,24 +53,6 @@
     justify-content: center;
     align-items: center;
 
-    .small-btn {
-      display: inline;
-      padding: 3px 8px;
-      background-color: inherit;
-      border: 0;
-      color: $gray-darkest;
-
-      &:hover:not(.disabled) {
-        background-color: $gray-darkest;
-        color: white;
-      }
-
-      &.disabled {
-        color: $gray;
-        cursor: not-allowed;
-      }
-    }
-
     .margin {
       margin: 0 10px;
     }

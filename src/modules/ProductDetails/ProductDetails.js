@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addToCart } from '../Product/ProductActions';
+import { addToCart } from '../Cart/CartActions';
 import parseCurrency from '../../util/parseCurrency';
 
 import './ProductDetails.scss';

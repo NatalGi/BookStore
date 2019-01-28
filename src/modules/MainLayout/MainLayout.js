@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Header } from '../Header/Header';
 import { Footer } from '../Footer/Footer';
 
-import styles from './MainLayout.scss';
+import './MainLayout.scss';
 
 export class MainLayout extends Component {
   render() {
