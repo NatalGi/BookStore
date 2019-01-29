@@ -14,6 +14,7 @@
 
   .data-section {
     flex: 0 1 67%;
+    position: relative;
 
     .author {
       font-weight: 400;
@@ -39,6 +40,19 @@
 
     .info, .divider {
       display: inline;
+    }
+
+    .state {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      max-width: 70px;
+      font-size: .8em;
+      text-align: center;
+      background-color: $sea-darkest;
+      color: white;
+      padding: 2px 5px;
+      border-radius: 5px;
     }
   }
 }

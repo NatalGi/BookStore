@@ -38,6 +38,7 @@ const ProductDetails = ({ match, products, addToCart }) => {
         <h5 className="divider"> | </h5>
         <h5 className="info">Oprawa: {product.cover}</h5>
         <h3 className="price">{product.price ? parseCurrency(product.price) : 0} zł</h3>
+        {product.state !== "false" ? <div className="state">{product.state}</div> : ""}
         <button className="basket-btn" onClick={() => addToCart(product)}>Dodaj do koszyka</button>
       </div>
     </div>
