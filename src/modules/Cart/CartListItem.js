@@ -20,7 +20,7 @@ const CartListItem = ({ product, amount, updateCartAmount, deleteFromCart }) => 
         <h3 className="price">{parseCurrency(product.price)} zł</h3>
       </div>
       <div className="amount-section">
-        <button className={"small-btn" + (isDisabled ? " disabled" : "")} onClick={() => updateCartAmount(product.id, -1)} disabled={isDisabled}>-</button>
+        <button className="small-btn" onClick={() => updateCartAmount(product.id, -1)} disabled={isDisabled}>-</button>
         <span className="margin">{amount}</span>
         <button className="small-btn" onClick={() => updateCartAmount(product.id, 1)}>+</button>
         <span className="margin">szt</span>

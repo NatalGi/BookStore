@@ -1,36 +1,45 @@
 import React from 'react';
 import CartList from './CartList';
 import Popup from '../Popup/Popup';
+import Money from 'money-math';
 
 import { FiCheck, FiX } from 'react-icons/fi';
 import './CartPresentation.scss';
 
-const CartPresentation = ({ products, state, discountCodeChangeHandler, checkDiscountCode, deleteDiscountCode, popupExitHandler, updateCartAmount, deleteFromCart  }) => {
+const CartPresentation = (props) => {
   return (
     <div className="Cart">
-      <CartList products={products} updateCartAmount={updateCartAmount} deleteFromCart={deleteFromCart} />
+      <CartList products={props.products} updateCartAmount={props.updateCartAmount} deleteFromCart={props.deleteFromCart} />
       <div className="summary">
         <div className="discount-section">
-          {state.isDiscountCode ?
+          {props.state.isDiscountCode ?
             <div className="discount-info">
-              {state.discountInfo}
-              <button className="small-btn" onClick={() => deleteDiscountCode()}><FiX /></button>
+              {props.state.discountInfo}
+              <button className="small-btn" onClick={() => props.deleteDiscountCode()}><FiX /></button>
             </div> : ""
           }
           {
-            state.discountCodeError ? <Popup message={state.errorMessage} exitHandler={popupExitHandler} /> : ""
+            props.state.discountCodeError ? <Popup message={props.state.errorMessage} exitHandler={props.discountCodePopupExitHandler} /> : ""
           }
-          <div className={ state.isDiscountCode ? "discount-code" : "discount-code show" }>
+          <div className={props.state.isDiscountCode ? "discount-code" : "discount-code show" }>
             <input className="discount-code-input"
-              value={state.discountCodeInput}
-              onChange={(event) => discountCodeChangeHandler(event)}
+              value={props.state.discountCodeInput}
+              onChange={(event) => props.discountCodeChangeHandler(event)}
               placeholder="kod rabatowy"
             />
-            <button className="accept-code-btn" onClick={() => checkDiscountCode()}>{<FiCheck />}</button>
+            <button className="accept-code-btn" onClick={() => props.checkDiscountCode()}>{<FiCheck />}</button>
           </div>
         </div>
-        <div>Razem: <span className="cartSum">{state.cartSum}</span> zł</div>
-        <button className="buy-btn">Złóż zamówienie</button>
+        <div>Razem: <span className="cartSum">{props.state.cartSum}</span> zł</div>
+        <button className="buy-btn" onClick={() => props.submitOrder()} disabled={Money.isZero(props.state.cartSum) ? true : false}>Złóż zamówienie</button>
+        { props.state.submitOrder ?
+          <Popup
+            message={props.state.orderSummary}
+            exitHandler={props.submitOrderPopupExitHandler}
+            tabular="true"
+            data={{discount: props.state.discountInfo, cartSum: props.state.cartSum}}
+          />
+          : "" }
       </div>
     </div>
   );

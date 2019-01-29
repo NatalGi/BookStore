@@ -3,6 +3,7 @@ export const UPDATE_CART_AMOUNT = 'UPDATE_CART_AMOUNT';
 export const DELETE_FROM_CART = 'DELETE_FROM_CART';
 export const ADD_DISCOUNT_CODE = 'ADD_DISCOUNT_CODE';
 export const DELETE_DISCOUNT_CODE = 'DELETE_DISCOUNT_CODE';
+export const CLEAR_CART = 'CLEAR_CART';
 
 export function addToCart(product) {
   return {
@@ -36,5 +37,11 @@ export function addDiscountCode(discountCode) {
 export function deleteDiscountCode() {
   return {
     type: DELETE_DISCOUNT_CODE,
+  }
+}
+
+export function clearCart() {
+  return {
+    type: CLEAR_CART,
   }
 }

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import CartPresentation from './CartPresentation';
 import Money from 'money-math';
 import parseCurrency from '../../util/parseCurrency';
-import { addDiscountCode, deleteDiscountCode, updateCartAmount, deleteFromCart } from './CartActions';
+import { addDiscountCode, deleteDiscountCode, updateCartAmount, deleteFromCart, clearCart } from './CartActions';
 
 const parse = (floatValue) => {
   return Money.floatToAmount(floatValue);
@@ -24,12 +24,16 @@ class Cart extends Component {
       discountInfo: isDiscountCode ? this.defineDiscountInfo() : "",
       discountCodeError: false,
       errorMessage: "",
+      submitOrder: false,
+      orderSummary: "",
     }
 
     this.defineDiscountInfo = this.defineDiscountInfo.bind(this);
     this.discountCodeChangeHandler = this.discountCodeChangeHandler.bind(this);
     this.checkDiscountCode = this.checkDiscountCode.bind(this);
-    this.popupExitHandler = this.popupExitHandler.bind(this);
+    this.discountCodePopupExitHandler = this.discountCodePopupExitHandler.bind(this);
+    this.submitOrderPopupExitHandler = this.submitOrderPopupExitHandler.bind(this);
+    this.submitOrder = this.submitOrder.bind(this);
   }
 
   defineDiscountInfo(discount = this.props.discountCode.discount, unit = this.props.discountCode.unit) {
@@ -48,6 +52,7 @@ class Cart extends Component {
   static getDerivedStateFromProps(nextProps, nextState) {
     let cartSum = Money.format("PLN", parse(nextProps.products.reduce(add, 0)));
     const isDiscountCode = Object.values(nextProps.discountCode).length !== 0;
+    let discountInfo = nextState.discountInfo;
 
     if(isDiscountCode) {
       if(!nextProps.discountCode.limit || cartSum >= parse(nextProps.discountCode.limit)) {
@@ -66,11 +71,14 @@ class Cart extends Component {
             break;
         }
       }
+    } else {
+      discountInfo = "";
     }
     return {
       ...nextState,
       cartSum,
       isDiscountCode,
+      discountInfo,
     };
   }
 
@@ -114,11 +122,39 @@ class Cart extends Component {
     this.setState(newState);
   }
 
-  popupExitHandler() {
+  discountCodePopupExitHandler() {
     this.setState({
       ...this.state,
       discountCodeError: false,
       errorMessage: ""
+    });
+  }
+
+  submitOrder() {
+    let orderSummary = "";
+
+    this.props.products.forEach((product, index) => {
+      orderSummary += `${index + 1}.\t${product.product.author}\t\"${product.product.title}\"\t${product.amount} szt.\t${parseCurrency(product.product.price)} zł\n`;
+    });
+
+    orderSummary = orderSummary.slice(0, -1);
+
+    this.setState({
+      ...this.state,
+      submitOrder: true,
+      orderSummary,
+    });
+  }
+
+  submitOrderPopupExitHandler() {
+    this.props.clearCart();
+
+    this.setState({
+      discountCodeInput: "",
+      discountCodeError: false,
+      errorMessage: "",
+      submitOrder: false,
+      orderSummary: "",
     });
   }
 
@@ -131,9 +167,11 @@ class Cart extends Component {
       discountCodeChangeHandler={this.discountCodeChangeHandler}
       checkDiscountCode={this.checkDiscountCode}
       deleteDiscountCode={this.props.deleteDiscountCode}
-      popupExitHandler={this.popupExitHandler}
+      discountCodePopupExitHandler={this.discountCodePopupExitHandler}
       updateCartAmount={this.props.updateCartAmount}
       deleteFromCart={this.props.deleteFromCart}
+      submitOrder={this.submitOrder}
+      submitOrderPopupExitHandler={this.submitOrderPopupExitHandler}
       />
     );
   }
@@ -152,6 +190,7 @@ const mapDispatchToProps = {
   deleteDiscountCode,
   updateCartAmount,
   deleteFromCart,
+  clearCart,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Cart);

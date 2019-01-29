@@ -1,4 +1,4 @@
-import { ADD_TO_CART, UPDATE_CART_AMOUNT, DELETE_FROM_CART, ADD_DISCOUNT_CODE, DELETE_DISCOUNT_CODE } from './CartActions';
+import { ADD_TO_CART, UPDATE_CART_AMOUNT, DELETE_FROM_CART, ADD_DISCOUNT_CODE, DELETE_DISCOUNT_CODE, CLEAR_CART } from './CartActions';
 
 const initialState = {
   products: {},
@@ -26,6 +26,15 @@ const CartReducer = (state = initialState, action) => {
       newState = { ...state };
       delete newState.discountCode;
       newState.discountCode = {};
+      return newState;
+    case CLEAR_CART:
+      newState = { ...state };
+      delete newState.products;
+      delete newState.discountCode;
+      newState = {
+        products: {},
+        discountCode: {},
+      };
       return newState;
     default:
       return state;

@@ -34,9 +34,15 @@ a {
   color: white;
   cursor: pointer;
 
-  &:hover {
+  &:hover:not(:disabled) {
     background-color: inherit;
     color: $sea-darkest;
+  }
+
+  &:disabled {
+    background-color: $gray;
+    border-color: $gray;
+    cursor: not-allowed;
   }
 }
 
@@ -51,13 +57,13 @@ a {
   border: 0;
   color: $gray-darkest;
 
-  &:hover:not(.disabled) {
+  &:hover:not(:disabled) {
     background-color: $gray-darkest;
     color: white;
   }
 
-  &.disabled {
+  &:disabled {
     color: $gray;
-    cursor: not-allowed;
+    background-color: inherit;
   }
 }
