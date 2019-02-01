@@ -6,10 +6,10 @@ import './Footer.scss';
 export const Footer = props => {
   return (
     <section className="Footer">
-      <div className="Rights">
+      <div className="rights">
         All rights reserved
       </div>
-      <nav className="Nav">
+      <nav className="nav">
         <NavLink exact to='/' className="Link" activeClassName="active">Home</NavLink>
         <NavLink exact to='/faq' className="Link" activeClassName="active">Faq</NavLink>
         <NavLink exact to='/statue' className="Link" activeClassName="active">Regulamin</NavLink>

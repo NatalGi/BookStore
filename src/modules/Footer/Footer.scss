@@ -5,17 +5,16 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 80px;
+  letter-spacing: .1em;
 
-  .Rights {
+  .rights {
     font-size: .9em;
-    letter-spacing: .1em;
     color: $gray;
   }
 
-  .Nav {
+  .nav {
     font-size: .9em;
     text-transform: uppercase;
-    letter-spacing: .1em;
 
     .Link {
       margin-left: 25px;
@@ -28,6 +27,31 @@
       &:hover:not(.active) {
         font-weight: 500;
         color: $sea;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column-reverse;
+    align-items: center;
+
+    .nav {
+      margin-bottom: 10px;
+
+      .Link {
+        margin: 0 12px;
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+    letter-spacing: 0;
+
+    .nav {
+      //letter-spacing: 0;
+
+      .Link {
+        margin: 0 8px;
       }
     }
   }
