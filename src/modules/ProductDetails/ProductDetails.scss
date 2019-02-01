@@ -2,51 +2,112 @@
 
 .ProductDetails {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 
-  .pic-section {
-    flex: 0 1 30%;
+  .section-one {
+    display: flex;
+    justify-content: space-between;
 
-    .pic {
-      width: 100%;
+    .pic-container {
+      flex: 0 1 30%;
+
+      .pic {
+        width: 100%;
+      }
+    }
+
+    .info-container {
+      flex: 0 1 67%;
+      position: relative;
+
+      .author {
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+
+      .title {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      .subtitle {
+        margin-top: 0;
+      }
+
+      .info, .divider {
+        display: inline;
+      }
+
+      .state {
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 70px;
+        font-size: .8em;
+        text-align: center;
+        background-color: $sea-darkest;
+        color: white;
+        padding: 2px 5px;
+        border-radius: 5px;
+      }
     }
   }
 
-  .data-section {
-    flex: 0 1 67%;
-    position: relative;
+  .section-two {
 
-    .author {
-      font-weight: 400;
-      text-transform: uppercase;
-      margin-top: 0;
-      margin-bottom: 10px;
+  }
+
+
+
+  @media (max-width: 685px) {
+    flex-direction: column;
+
+    .section-one {
+      .info-container {
+        flex: 0 1 60%;
+
+        .state {
+          display: inline-block;
+          position: inherit;
+          text-align: left;
+          max-width: none;
+          margin-bottom: 8px;
+        }
+
+        .title {
+          font-size: 1.2em;
+        }
+
+        .subtitle {
+          font-size: 1em;
+        }
+      }
+
+      .pic-container {
+        flex: 0 1 35%;
+        margin: 0 auto 30px auto;
+        width: 250px;
+      }
     }
+  }
 
-    .title {
-      margin-top: 0;
-      margin-bottom: 0;
+  @media (max-width: 600px) {
+    .section-one {
+      .info-container {
+        flex: 0 1 50%;
+      }
+
+      .pic-container {
+        flex: 0 1 42%;
+      }
     }
+  }
 
-    .subtitle {
-      margin-top: 0;
-    }
-
-    .info, .divider {
-      display: inline;
-    }
-
-    .state {
-      position: absolute;
-      top: 5px;
-      right: 5px;
-      max-width: 70px;
-      font-size: .8em;
-      text-align: center;
-      background-color: $sea-darkest;
-      color: white;
-      padding: 2px 5px;
-      border-radius: 5px;
+  @media (max-width: 550px) {
+    .section-one {
+      flex-direction: column;
     }
   }
 }

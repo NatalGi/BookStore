@@ -22,24 +22,30 @@ const ProductDetails = ({ match, products, addToCart }) => {
 
   return (
     <div className="ProductDetails">
-      <div className="pic-section">
-        <img className="pic" src={product.pic ? require(`../../data${product.pic}`) : ""} alt={product.title} />
+      <div className="section-one">
+        <div className="pic-container">
+          <img className="pic" src={product.pic ? require(`../../data${product.pic}`) : ""} alt={product.title} />
+        </div>
+        <div className="info-container">
+          {product.state !== "false" ? <div className="state">{product.state}</div> : ""}
+          <h5 className="author">{product.author}</h5>
+          <h2 className="title">{product.title}</h2>
+          <h3 className="subtitle">{product.subtitle}</h3>
+          <h5 className="info">Rok wydania: {product.year}</h5>
+          <h5 className="divider"> | </h5>
+          <h5 className="info">Wydawnictwo: {product.publisher}</h5>
+          <h5 className="divider"> | </h5>
+          <h5 className="info">Ilość stron: {product.pages}</h5>
+          <h5 className="divider"> | </h5>
+          <h5 className="info">Oprawa: {product.cover}</h5>
+          <h3 className="price">{product.price ? parseCurrency(product.price) : 0} zł</h3>
+          <button className="basket-btn" onClick={() => addToCart(product)}>Dodaj do koszyka</button>
+        </div>
       </div>
-      <div className="data-section">
-        <h5 className="author">{product.author}</h5>
-        <h2 className="title">{product.title}</h2>
-        <h3 className="subtitle">{product.subtitle}</h3>
-        <p className="desc">{product.desc}</p>
-        <h5 className="info">Rok wydania: {product.year}</h5>
-        <h5 className="divider"> | </h5>
-        <h5 className="info">Wydawnictwo: {product.publisher}</h5>
-        <h5 className="divider"> | </h5>
-        <h5 className="info">Ilość stron: {product.pages}</h5>
-        <h5 className="divider"> | </h5>
-        <h5 className="info">Oprawa: {product.cover}</h5>
-        <h3 className="price">{product.price ? parseCurrency(product.price) : 0} zł</h3>
-        {product.state !== "false" ? <div className="state">{product.state}</div> : ""}
-        <button className="basket-btn" onClick={() => addToCart(product)}>Dodaj do koszyka</button>
+      <div className="section-two">
+        <div className="description">
+          <p className="desc">{product.desc}</p>
+        </div>
       </div>
     </div>
   );
