@@ -24,6 +24,12 @@ a {
   color: inherit;
 }
 
+p, ul, li {
+  font-size: .95em;
+  line-height: 1.5em;
+  color: $gray-darkest;
+}
+
 *[class*="-btn"] {
   display: block;
   margin: 20px 0;

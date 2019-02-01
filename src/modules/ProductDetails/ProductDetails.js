@@ -29,7 +29,7 @@ const ProductDetails = ({ match, products, addToCart }) => {
         <h5 className="author">{product.author}</h5>
         <h2 className="title">{product.title}</h2>
         <h3 className="subtitle">{product.subtitle}</h3>
-        <div className="desc">{product.desc}</div>
+        <p className="desc">{product.desc}</p>
         <h5 className="info">Rok wydania: {product.year}</h5>
         <h5 className="divider"> | </h5>
         <h5 className="info">Wydawnictwo: {product.publisher}</h5>
