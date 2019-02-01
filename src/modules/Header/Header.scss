@@ -42,6 +42,11 @@
     }
   }
 
+  @media (max-width: 1200px) {
+    margin-bottom: 55px;
+    border-bottom: 1px solid $gray-light;
+  }
+
   @media (min-width: 686px) and (max-width: 1075px) {
     flex-direction: column;
     justify-content: flex-start;

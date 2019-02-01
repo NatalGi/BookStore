@@ -1,16 +1,24 @@
 .container {
   flex: 0 1 75%;
-}
 
-.ProductList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
+  .ProductList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
 
-.Pagination {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 30px;
-  padding: 5px;
+  .Pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    padding: 5px;
+  }
+
+  @media(max-width: 1200px) {
+    flex: 0 1 auto;
+
+    .ProductList {
+      justify-content: center;
+    }
+  }
 }

@@ -34,6 +34,7 @@
 
   .author {
     margin: 5px 0;
+    max-width: 75%;
     font-size: .85em;
     font-weight: 400;
   }
@@ -55,5 +56,23 @@
     color: white;
     padding: 2px 5px;
     border-radius: 5px;
+  }
+
+  @media (max-width: 440px) {
+    width: 100%;
+
+    .image-container {
+      height: auto;
+      margin: 15px 0;
+    }
+
+    .author {
+      max-width: 65%;
+    }
+
+    .subtitle {
+      height: auto;
+      margin-bottom: 5px;
+    }
   }
 }

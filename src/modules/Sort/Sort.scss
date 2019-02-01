@@ -29,4 +29,25 @@
       color: $sea;
     }
   }
+
+  @media (max-width: 1200px) {
+    flex: 0 1 100%;
+    display: flex;
+    border: 0;
+    padding-bottom: 0;
+
+    .header, button {
+      margin: 0 15px;
+    }
+  }
+
+  @media (max-width: 460px) {
+    .header {
+      display: none;
+    }
+
+    button {
+      margin: 0 9px;
+    }
+  }
 }

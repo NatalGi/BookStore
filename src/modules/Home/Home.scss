@@ -2,4 +2,10 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+
+  @media(max-width: 1200px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
