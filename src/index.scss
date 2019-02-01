@@ -73,3 +73,21 @@ p, ul, li {
     background-color: inherit;
   }
 }
+
+h2 {
+  font-size: 1.3em;
+}
+
+h3 {
+  font-size: .9em;
+}
+
+@media (max-width: 685px) {
+  h2 {
+    font-size: 1.2em;
+  }
+
+  h3 {
+    font-size: .8em;
+  }
+}

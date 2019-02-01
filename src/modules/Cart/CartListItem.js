@@ -11,20 +11,22 @@ const CartListItem = ({ product, amount, updateCartAmount, deleteFromCart }) => 
       <div className="pic-section">
         <img className="pic" src={require(`../../data${product.pic}`)} alt={product.title} />
       </div>
-      <div className="data-section">
+      <div className="info-section">
         <h5 className="author">{product.author}</h5>
         <h2 className="title">{product.title}</h2>
         <h3 className="subtitle">{product.subtitle}</h3>
       </div>
-      <div className="price-section">
-        <h3 className="price">{parseCurrency(product.price)} zł</h3>
-      </div>
-      <div className="amount-section">
-        <button className="small-btn" onClick={() => updateCartAmount(product.id, -1)} disabled={isDisabled}>-</button>
-        <span className="margin">{amount}</span>
-        <button className="small-btn" onClick={() => updateCartAmount(product.id, 1)}>+</button>
-        <span className="margin">szt</span>
-        <button className="small-btn icon" onClick={() => deleteFromCart(product.id)}><FiTrash2 /></button>
+      <div className="numbers-section">
+        <div className="price-container">
+          <h2 className="price">{parseCurrency(product.price)} zł</h2>
+        </div>
+        <div className="amount-container">
+          <button className="small-btn" onClick={() => updateCartAmount(product.id, -1)} disabled={isDisabled}>-</button>
+          <span className="margin">{amount}</span>
+          <button className="small-btn" onClick={() => updateCartAmount(product.id, 1)}>+</button>
+          <span className="margin">szt</span>
+          <button className="small-btn icon" onClick={() => deleteFromCart(product.id)}><FiTrash2 /></button>
+        </div>
       </div>
     </div>
   );

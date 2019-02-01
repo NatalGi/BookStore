@@ -12,10 +12,10 @@ const ProductListItem = ({ product }) => {
       <Link className="image-container" to={'/productDetails/' + product.id}>
         <img className="image" src={require(`../../data${product.pic}`)} alt={product.title} />
       </Link>
-      <Link className="title" to={'/productDetails/' + product.id}>
-        {product.title.length > 26 ? product.title.substring(0, 26) + "..." : product.title}
+      <Link to={'/productDetails/' + product.id}>
+        <h2 className="title">{product.title.length > 26 ? product.title.substring(0, 26) + "..." : product.title}</h2>
       </Link>
-      <h4 className="subtitle">{product.subtitle ? (product.subtitle.length > 40 ? product.subtitle.substring(0, 40) + "..." : product.subtitle) : ""}</h4>
+      <h3 className="subtitle">{product.subtitle ? (product.subtitle.length > 40 ? product.subtitle.substring(0, 40) + "..." : product.subtitle) : ""}</h3>
       <h4 className="price">{parseCurrency(product.price)} zł</h4>
       {product.state !== "false" ? <div className="state">{product.state}</div> : ""}
     </div>

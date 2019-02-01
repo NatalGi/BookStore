@@ -83,4 +83,12 @@
       }
     }
   }
+
+  @media (max-width: 500px) {
+    .summary {
+      .cartSum {
+        font-size: 1.2em;
+      }
+    }
+  }
 }
