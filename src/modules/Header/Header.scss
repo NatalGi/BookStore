@@ -44,7 +44,6 @@
 
   @media (max-width: 1200px) {
     margin-bottom: 55px;
-    border-bottom: 1px solid $gray-light;
   }
 
   @media (min-width: 686px) and (max-width: 1075px) {
@@ -54,6 +53,8 @@
   }
 
   @media (max-width: 685px) {
+    margin-bottom: 20px;
+
     .nav {
       display: none;
       position: fixed;

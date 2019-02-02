@@ -31,9 +31,14 @@
     }
   }
 
+  @media (max-width: 1200px) {
+    margin-top: 55px;
+  }
+
   @media (max-width: 600px) {
     flex-direction: column-reverse;
     align-items: center;
+    margin-top: 32px;
 
     .nav {
       margin-bottom: 10px;
