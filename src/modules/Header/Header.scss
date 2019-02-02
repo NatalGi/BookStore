@@ -28,6 +28,7 @@
       color: $gray;
 
       &.icon {
+        position: relative;
         font-size: 1.5em;
       }
 
@@ -38,6 +39,20 @@
       &:hover:not(.active) {
         font-weight: 500;
         color: $sea;
+      }
+
+      .products-in-cart {
+        position: absolute;
+        left: 60%;
+        top: 83%;
+        transform: translate(-50%, 0);
+        text-align: center;
+        border-radius: 5px;
+        padding: 1px 5px;
+        background-color: $sea-darkest;
+        color: white;
+        font-size: .6em;
+        letter-spacing: 0;
       }
     }
   }
