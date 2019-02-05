@@ -8,6 +8,7 @@ import { Statute } from '../Statute/Statute';
 import { Contact } from '../Contact/Contact';
 import Cart from '../Cart/Cart';
 import ProductDetails from '../ProductDetails/ProductDetails';
+import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
 import { successFetchProducts } from '../Product/ProductActions';
 import { successFetchDiscountCodes } from '../DiscountCodes/DiscountCodesActions';
@@ -23,13 +24,15 @@ class App extends Component {
       <BrowserRouter>
         <MainLayout>
           <Switch>
-            <Route exact path={'/'} component={Home} />
-            <Route exact path={'/page/:page'} component={Home} />
-            <Route exact path={'/productDetails/:id'} component={ProductDetails} />
-            <Route exact path={'/faq'} component={Faq} />
-            <Route exact path={'/statue'} component={Statute} />
-            <Route exact path={'/contact'} component={Contact} />
-            <Route exact path={'/cart'} component={Cart} />
+            <ScrollToTop>
+              <Route exact path={'/'} component={Home} />
+              <Route exact path={'/page/:page'} component={Home} />
+              <Route exact path={'/productDetails/:id'} component={ProductDetails} />
+              <Route exact path={'/faq'} component={Faq} />
+              <Route exact path={'/statue'} component={Statute} />
+              <Route exact path={'/contact'} component={Contact} />
+              <Route exact path={'/cart'} component={Cart} />
+            </ScrollToTop>
           </Switch>
         </MainLayout>
       </BrowserRouter>

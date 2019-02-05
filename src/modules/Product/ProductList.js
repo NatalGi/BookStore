@@ -29,11 +29,6 @@ class ProductList extends Component {
     }
   }
 
-  componentDidUpdate() {
-    console.log('RELOAD');
-    ReactDom.findDOMNode(this).scrollIntoView();
-  }
-
   render() {
     return (
       <div className="container">
