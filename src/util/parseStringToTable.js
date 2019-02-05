@@ -17,7 +17,13 @@ const parseStringToTable = (data) => {
     )
   });
 
-  return <table> {parsedTabularMessage} </table>;
+  return (
+    <table>
+      <tbody>
+        {parsedTabularMessage}
+      </tbody>
+    </table>
+  );
 }
 
 export default parseStringToTable;

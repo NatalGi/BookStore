@@ -44,7 +44,7 @@ const ProductDetails = ({ match, products, addToCart }) => {
       </div>
       <div className="section-two">
         <div className="description">
-          <p className="desc">{product.desc}</p>
+          <div className="desc">{product.desc}</div>
         </div>
       </div>
     </div>

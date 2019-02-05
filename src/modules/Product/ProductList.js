@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDom from 'react-dom';
 import { connect } from 'react-redux';
 import ProductListItem from './ProductListItem';
 import Pagination from '../Pagination/Pagination';
