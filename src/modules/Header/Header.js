@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
+import toggleBodyScroll from '../../util/toggleBodyScroll';
 
 import { FiShoppingCart, FiMenu } from 'react-icons/fi';
 import './Header.scss';
@@ -13,17 +14,19 @@ class Header extends Component {
       showNav: false,
     }
 
-    this.showNav = this.showNav.bind(this);
-    this.hideNav = this.hideNav.bind(this);
+    this.toggleNav = this.toggleNav.bind(this);
+    //this.hideNav = this.hideNav.bind(this);
   }
 
-  showNav() {
-    this.setState({showNav: true});
+  toggleNav(showNav) {
+    toggleBodyScroll();
+    this.setState({showNav,});
   }
 
-  hideNav() {
+  /*hideNav() {
+    toggleBodyScroll();
     this.setState({showNav: false});
-  }
+  }*/
 
   render() {
     return (
@@ -31,15 +34,15 @@ class Header extends Component {
         <div className="brand">
           Czyttam.pl
         </div>
-        <button className="menu-btn" onClick={() => this.showNav()}>
+        <button className="menu-btn" onClick={() => this.toggleNav(true)}>
           <FiMenu />
         </button>
         <nav className={'nav' + (this.state.showNav ? ' show' : '')}>
-          <NavLink exact to='/' className="Link" activeClassName="active" onClick={() => this.hideNav()}>Home</NavLink>
-          <NavLink exact to='/faq' className="Link" activeClassName="active" onClick={() => this.hideNav()}>Faq</NavLink>
-          <NavLink exact to='/statue' className="Link" activeClassName="active" onClick={() => this.hideNav()}>Regulamin</NavLink>
-          <NavLink exact to='/contact' className="Link" activeClassName="active" onClick={() => this.hideNav()}>Kontakt</NavLink>
-          <NavLink exact to='/cart' className="Link icon" activeClassName="active" onClick={() => this.hideNav()}>
+          <NavLink exact to='/' className="Link" activeClassName="active" onClick={() => this.toggleNav(false)}>Home</NavLink>
+          <NavLink exact to='/faq' className="Link" activeClassName="active" onClick={() => this.toggleNav(false)}>Faq</NavLink>
+          <NavLink exact to='/statue' className="Link" activeClassName="active" onClick={() => this.toggleNav(false)}>Regulamin</NavLink>
+          <NavLink exact to='/contact' className="Link" activeClassName="active" onClick={() => this.toggleNav(false)}>Kontakt</NavLink>
+          <NavLink exact to='/cart' className="Link icon" activeClassName="active" onClick={() => this.toggleNav(false)}>
             {<FiShoppingCart />}
             {this.props.productsInCart > 0 ?
               <div className="products-in-cart">{this.props.productsInCart}</div>

@@ -4,6 +4,7 @@ import CartPresentation from './CartPresentation';
 import Money from 'money-math';
 import parseCurrency from '../../util/parseCurrency';
 import { addDiscountCode, deleteDiscountCode, updateCartAmount, deleteFromCart, clearCart } from './CartActions';
+import toggleBodyScroll from '../../util/toggleBodyScroll';
 
 const parse = (floatValue) => {
   return Money.floatToAmount(floatValue);
@@ -99,6 +100,7 @@ class Cart extends Component {
         if(element.limit && this.state.cartSum < element.limit) { // Check the code usage limit
           newState.errorMessage = "Aby wykorzystać kod musisz zrobić zakupy za minimum " + element.limit + "zł";
           newState.discountCodeError = true;
+          toggleBodyScroll();
         }
         this.props.addDiscountCode({
           code: element.code,
@@ -116,6 +118,7 @@ class Cart extends Component {
       newState.isDiscountCode = false;
       newState.errorMessage = "Podany kod jest nieprawidłowy";
       newState.discountCodeError = true;
+      toggleBodyScroll();
     }
 
     newState.discountCodeInput = "";
@@ -123,6 +126,8 @@ class Cart extends Component {
   }
 
   discountCodePopupExitHandler() {
+    toggleBodyScroll();
+
     this.setState({
       ...this.state,
       discountCodeError: false,
@@ -134,10 +139,11 @@ class Cart extends Component {
     let orderSummary = "";
 
     this.props.products.forEach((product, index) => {
-      orderSummary += `${index + 1}.\t${product.product.author}\t\"${product.product.title}\"\t${product.amount} szt.\t${parseCurrency(product.product.price)} zł\n`;
+      orderSummary += `${index + 1}.\t${product.product.author}\t"${product.product.title}"\t${product.amount} szt.\t${parseCurrency(product.product.price)} zł\n`;
     });
 
     orderSummary = orderSummary.slice(0, -1);
+    toggleBodyScroll();
 
     this.setState({
       ...this.state,
@@ -147,6 +153,7 @@ class Cart extends Component {
   }
 
   submitOrderPopupExitHandler() {
+    toggleBodyScroll();
     this.props.clearCart();
 
     this.setState({

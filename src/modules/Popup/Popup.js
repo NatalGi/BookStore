@@ -12,18 +12,18 @@ const Popup = ({ message, exitHandler, tabular = false, data = false }) => {
   return (
     <div className="Popup">
       <div className="overlay">
-        {}
-      </div>
-      <div className="content">
-        <div className="message">
-          {message}
-          {(data && data.discount && data.discount.length > 0) ? <div className="data discount">Rabat: {data.discount}</div> : ""}
-          {(data && data.cartSum) ? <div className="data sum">Razem: {data.cartSum} zł</div> : ""}
+        <div className={"content" + (tabular ? " full-width" : "")}>
+          <div className="message">
+            {message}
+            {(data && data.discount && data.discount.length > 0) ? <div className="data discount">Rabat: {data.discount}</div> : ""}
+            {(data && data.cartSum) ? <div className="data sum">Razem: {data.cartSum} zł</div> : ""}
+          </div>
+          <div className="small-btn exit" onClick={() => exitHandler()}>
+            {<FiX />}
+          </div>
         </div>
-        <div className="small-btn exit" onClick={() => exitHandler()}>
-          {<FiX />}
-        </div>
       </div>
+
     </div>
   );
 }
