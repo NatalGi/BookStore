@@ -68,7 +68,14 @@
   }
 
   @media (max-width: 685px) {
-    margin-bottom: 20px;
+    z-index: 500;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 30px;
+    //margin-bottom: 20px;
+    background-color: inherit;
 
     .nav {
       display: none;

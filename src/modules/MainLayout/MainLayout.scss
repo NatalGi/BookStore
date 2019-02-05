@@ -18,7 +18,11 @@
     padding: 20px 42px;
   }*/
 
+  @media (max-width: 685px) {
+    padding-top: 80px;
+  }
+
   @media (max-width: 480px) {
-    padding: 14px 30px;
+    padding: 80px 30px 14px 30px;
   }
 }
