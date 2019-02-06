@@ -1,0 +1,76 @@
+[debug] [2019-02-06T14:46:07.809Z] ----------------------------------------------------------------------
+[debug] [2019-02-06T14:46:07.813Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Natal\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --project czyttam
+[debug] [2019-02-06T14:46:07.813Z] CLI Version:   6.3.1
+[debug] [2019-02-06T14:46:07.813Z] Platform:      win32
+[debug] [2019-02-06T14:46:07.813Z] Node Version:  v8.12.0
+[debug] [2019-02-06T14:46:07.814Z] Time:          Wed Feb 06 2019 15:46:07 GMT+0100 (Środkowoeuropejski czas stand.)
+[debug] [2019-02-06T14:46:07.814Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-02-06T14:46:07.828Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-02-06T14:46:07.828Z] > authorizing via signed-in user
+[debug] [2019-02-06T14:46:07.828Z] [iam] checking project czyttam for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-02-06T14:46:07.831Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/czyttam:testIamPermissions  
+
+[debug] [2019-02-06T14:46:08.893Z] <<< HTTP RESPONSE 200
+[debug] [2019-02-06T14:46:08.901Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/czyttam  
+ 
+[debug] [2019-02-06T14:46:09.408Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'czyttam'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-02-06T14:46:09.420Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/czyttam/versions  
+
+[debug] [2019-02-06T14:46:10.535Z] <<< HTTP RESPONSE 500
+[debug] [2019-02-06T14:46:10.537Z] <<< HTTP RESPONSE BODY
+[error] 
+[error] Error: HTTP Error: 500, Internal error encountered.
+[debug] [2019-02-06T14:46:10.682Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 500,
+      "message": "Internal error encountered.",
+      "status": "INTERNAL"
+    }
+  },
+  "response": {
+    "statusCode": 500,
+    "body": {
+      "error": {
+        "code": 500,
+        "message": "Internal error encountered.",
+        "status": "INTERNAL"
+      }
+    },
+    "headers": {
+      "vary": "X-Origin, Referer, Origin,Accept-Encoding",
+      "content-type": "application/json; charset=UTF-8",
+      "date": "Wed, 06 Feb 2019 14:45:43 GMT",
+      "server": "ESF",
+      "cache-control": "private",
+      "x-xss-protection": "1; mode=block",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "quic=\":443\"; ma=2592000; v=\"44,43,39\"",
+      "accept-ranges": "none",
+      "transfer-encoding": "chunked"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "firebasehosting.googleapis.com",
+        "port": 443,
+        "hostname": "firebasehosting.googleapis.com",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/v1beta1/sites/czyttam/versions",
+        "path": "/v1beta1/sites/czyttam/versions",
+        "href": "https://firebasehosting.googleapis.com/v1beta1/sites/czyttam/versions"
+      },
+      "method": "POST"
+    }
+  }
+}

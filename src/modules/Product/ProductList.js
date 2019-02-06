@@ -20,11 +20,13 @@ class ProductList extends Component {
     const productsTab = nextProps.products;
     const subProductsTab = productsTab.slice(rangeFrom, rangeTo);
     const pageCount = Math.ceil(productsTab.length/nextState.itemsToPage);
+    const idsTab = nextProps.products.map(product => product.id);
 
     return {
       ...nextState,
       subProductsTab,
       pageCount,
+      idsTab,
     }
   }
 
@@ -32,7 +34,14 @@ class ProductList extends Component {
     return (
       <div className="container">
         <div className="ProductList">
-          {this.state.subProductsTab.map(product => <ProductListItem key={product.id} product={product} />)}
+          {this.state.subProductsTab.map(
+            (product, key) =>
+            <ProductListItem
+              key={product.id}
+              product={product}
+              idsTab={this.state.idsTab}
+              itemIndex={(this.props.page-1) * this.state.itemsToPage + key} />
+          )}
         </div>
         {this.props.page <= this.state.pageCount ? <Pagination className="Pagination" page={this.props.page} pageCount={this.state.pageCount}/> : null}
       </div>
