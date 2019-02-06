@@ -17,7 +17,7 @@ const PaginationItem = ({ data, activePage, type }) => {
   }
 
   return (
-      <Link className={linkClass} to={'/page/' + link}>
+      <Link className={linkClass} aria-label={"Przejdź do strony numer " + link} to={'/page/' + link}>
         {data}
       </Link>
   );

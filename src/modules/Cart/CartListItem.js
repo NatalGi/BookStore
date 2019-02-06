@@ -21,11 +21,11 @@ const CartListItem = ({ product, amount, updateCartAmount, deleteFromCart }) => 
           <h2 className="price">{parseCurrency(product.price)} zł</h2>
         </div>
         <div className="amount-container">
-          <button className="small-btn" onClick={() => updateCartAmount(product.id, -1)} disabled={isDisabled}>-</button>
+          <button className="small-btn" aria-label="Zmniejsz ilość" onClick={() => updateCartAmount(product.id, -1)} disabled={isDisabled}>-</button>
           <span className="margin">{amount}</span>
-          <button className="small-btn" onClick={() => updateCartAmount(product.id, 1)}>+</button>
+          <button className="small-btn" aria-label="Zwiększ ilość" onClick={() => updateCartAmount(product.id, 1)}>+</button>
           <span className="margin">szt</span>
-          <button className="small-btn icon" onClick={() => deleteFromCart(product.id)}><FiTrash2 /></button>
+          <button className="small-btn icon" aria-label="Usuń" onClick={() => deleteFromCart(product.id)}><FiTrash2 /></button>
         </div>
       </div>
     </div>

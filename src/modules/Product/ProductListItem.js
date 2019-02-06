@@ -9,10 +9,10 @@ const ProductListItem = ({ product, idsTab, itemIndex }) => {
   return (
     <div className="ProductListItem" >
       <h4 className="author">{product.author.length > 36 ? product.author.substring(0, 36) + "..." : product.author}</h4>
-      <Link className="image-container" to={{pathname: '/productDetails/' + product.id, state: {idsTab, itemIndex, }}}>
+      <Link className="image-container" aria-label="Pokaż szczegóły produktu" to={{pathname: '/productDetails/' + product.id, state: {idsTab, itemIndex, }}}>
         <img className="image" src={require(`../../data${product.pic}`)} alt={product.title} />
       </Link>
-      <Link to={{pathname: '/productDetails/' + product.id, state: {idsTab, itemIndex, }}}>
+      <Link aria-label="Pokaż szczegóły produktu" to={{pathname: '/productDetails/' + product.id, state: {idsTab, itemIndex, }}}>
         <h2 className="title">{product.title.length > 26 ? product.title.substring(0, 26) + "..." : product.title}</h2>
       </Link>
       <h3 className="subtitle">{product.subtitle ? (product.subtitle.length > 40 ? product.subtitle.substring(0, 40) + "..." : product.subtitle) : ""}</h3>

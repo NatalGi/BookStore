@@ -18,7 +18,7 @@ const Popup = ({ message, exitHandler, tabular = false, data = false }) => {
             {(data && data.discount && data.discount.length > 0) ? <div className="data discount">Rabat: {data.discount}</div> : ""}
             {(data && data.cartSum) ? <div className="data sum">Razem: {data.cartSum} zł</div> : ""}
           </div>
-          <div className="small-btn exit" onClick={() => exitHandler()}>
+          <div className="small-btn exit" aria-label="Zamknij" onClick={() => exitHandler()}>
             {<FiX />}
           </div>
         </div>

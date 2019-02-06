@@ -34,15 +34,15 @@ class Header extends Component {
         <div className="brand">
           Czyttam.pl
         </div>
-        <button className="menu-btn" onClick={() => this.toggleNav(true)}>
+        <button className="menu-btn" aria-label="Pokaż menu" onClick={() => this.toggleNav(true)}>
           <FiMenu />
         </button>
         <nav className={'nav' + (this.state.showNav ? ' show' : '')}>
-          <NavLink exact to='/' className="Link" activeClassName="active" onClick={() => this.toggleNav(false)}>Home</NavLink>
-          <NavLink exact to='/faq' className="Link" activeClassName="active" onClick={() => this.toggleNav(false)}>Faq</NavLink>
-          <NavLink exact to='/statue' className="Link" activeClassName="active" onClick={() => this.toggleNav(false)}>Regulamin</NavLink>
-          <NavLink exact to='/contact' className="Link" activeClassName="active" onClick={() => this.toggleNav(false)}>Kontakt</NavLink>
-          <NavLink exact to='/cart' className="Link icon" activeClassName="active" onClick={() => this.toggleNav(false)}>
+          <NavLink exact to='/' className="Link" aria-label="Otwórz stronę główną" activeClassName="active" onClick={() => this.toggleNav(false)}>Home</NavLink>
+          <NavLink exact to='/faq' className="Link" aria-label="Otwórz FAQ" activeClassName="active" onClick={() => this.toggleNav(false)}>Faq</NavLink>
+          <NavLink exact to='/statue' className="Link" aria-label="Otwórz regulamin" activeClassName="active" onClick={() => this.toggleNav(false)}>Regulamin</NavLink>
+          <NavLink exact to='/contact' className="Link" aria-label="Otwórz informacje kontaktowe" activeClassName="active" onClick={() => this.toggleNav(false)}>Kontakt</NavLink>
+          <NavLink exact to='/cart' className="Link icon" aria-label="Otwórz koszyk" activeClassName="active" onClick={() => this.toggleNav(false)}>
             {<FiShoppingCart />}
             {this.props.productsInCart > 0 ?
               <div className="products-in-cart">{this.props.productsInCart}</div>

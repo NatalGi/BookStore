@@ -91,7 +91,7 @@ class ProductDetails extends Component {
             <h5 className="divider"> | </h5>
             <h5 className="info">Oprawa: {product.cover}</h5>
             <h3 className="price">{product.price ? parseCurrency(product.price) : 0} zł</h3>
-            <button className="basket-btn" onClick={() => this.props.addToCart(product)}>Dodaj do koszyka</button>
+            <button className="basket-btn" aria-label="Dodaj do koszyka" onClick={() => this.props.addToCart(product)}>Dodaj do koszyka</button>
           </div>
         </div>
         <div className="section-two">
